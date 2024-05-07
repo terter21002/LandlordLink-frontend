@@ -28,12 +28,50 @@ body.dark-mode {
     margin-right: auto;
   }
 }
+@media (max-width: 640px) {
+  .tail-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tail-w {
+    width: 100%;
+    span {
+      margin-left: 0
+    }
+    margin: 0
+  }
+  .tail-none {
+    display: none;
+    
+  }
+  .tail-block {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .tail-w-3 {
+    width: 33.3%
+  }
+  .tail-w-2 {
+    width: 50%
+  }
+  .tail-center 
+  {
+    text-align: center;
+  }
+  .tail-left {
+    text-align: left;
+  }
+  .tail-p-5 {
+   padding: 5px
+  }
+}
 
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
   }
 }
+
 
 @media (min-width: 1024px) {
   .container {
@@ -47,4 +85,9 @@ body.dark-mode {
   }
 }
 
+@media (min-width: 150px) {
+  .container {
+      max-width: 4550px;
+  }
+}
 /* ... Existing CSS ... */

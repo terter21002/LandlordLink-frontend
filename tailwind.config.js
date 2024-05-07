@@ -6,7 +6,12 @@ module.exports = {
   ],
   darkMode: 'class', 
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        '2xl': '150px',
+        '3xl': '639px'
+      }
+    },
   },
   variants: {},
   plugins: [],
