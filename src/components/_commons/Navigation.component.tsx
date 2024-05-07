@@ -43,7 +43,7 @@ const Navigation: React.FC = () => {
                     <NavLink to="/blogs" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
                       Blogs
                     </NavLink>
-                    <NavLink to="/categories" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
+                    <NavLink to="/forums" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
                       Forum
                     </NavLink>
                     <NavLink to="/portal" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
@@ -73,7 +73,7 @@ const Navigation: React.FC = () => {
               <NavLink to="/blogs" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
                 Blogs
               </NavLink>
-              <NavLink to="/categories" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
+              <NavLink to="/forums" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
                 Forum
               </NavLink>
               <NavLink to="/portal" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
