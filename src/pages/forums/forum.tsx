@@ -29,7 +29,7 @@ const Forum: React.FC<ForumProps> = ({ title }) => {
     return (
 
         <>
-            <div className="max-w-4xl mx-auto mt-8">
+            <div className="max-w-7xl mx-auto mt-8">
                 <h2 className="text-2xl font-bold mb-4">Forum Detail</h2>
                 <div className='grid grid-cols-12 gap-4'>
                     <div className='col-span-2 bg-gray-100 mx-auto p-3'>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { TiMessages } from "react-icons/ti";
 const BlogPage: React.FC = () => {
     return (
-        <div className="max-w-4xl mx-auto mt-8 ">
+        <div className="max-w-7xl mx-auto mt-8 ">
             <h1 className="text-3xl font-bold my-8">Blog Posts</h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-500">

@@ -20,13 +20,12 @@ const ContactForm: React.FC = () => {
     return (
         <div>
             <h1 className="text-3xl font-bold my-8 text-center">Landlord Portal</h1>
-            <div className='max-w-4xl mx-auto bg-orange-500 p-1 text-2xl text-left text-white font-bold'>
+            <div className='max-w-7xl mx-auto bg-orange-500 p-1 text-2xl text-left text-white font-bold'>
                 <div className='ml-4'>Add Tenant</div>
             </div>
-            <div className="max-w-4xl mx-auto mt-8 grid grid-cols-12 tail-flex gap-4">
+            <div className="max-w-7xl mx-auto mt-8 grid grid-cols-12 tail-flex gap-4 border py-2 pr-4">
                 <div className='col-span-6'>
                     <div >
-
                         <div>
                             <form onSubmit={handleSubmit} className="text-blue-700 max-w-lg mx-auto p-2">
                                 <div className="mb-1 grid grid-cols-12  gap-4 flex items-center">
@@ -109,20 +108,20 @@ const ContactForm: React.FC = () => {
                     <div className='mt-2'>
                         <h1>Utilities Owned:</h1>
                     </div>
-                    <div className='grid grid-cols-12 gap-4'>
-                        <div className='col-span-3 mt-2'>
+                    <div className='grid grid-cols-12 gap-4  tail-flex'>
+                        <div className='col-span-3 mt-2 tail-half' >
                             <h1>Gas($):</h1>
                             <input type="text" id="name" name="name" value={0} onChange={handleChange} className="mt-2 col-span-6 w-full px-4 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" />
                         </div>
-                        <div className='col-span-3 mt-2'>
+                        <div className='col-span-3 mt-2 tail-half'>
                             <h1>Electric($):</h1>
                             <input type="text" id="name" name="name" value={0} onChange={handleChange} className="mt-2 col-span-6 w-full px-4 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" />
                         </div>
-                        <div className='col-span-3 mt-2'>
+                        <div className='col-span-3 mt-2 tail-half'>
                             <h1>Water($):</h1>
                             <input type="text" id="name" name="name" value={0} onChange={handleChange} className="mt-2 col-span-6 w-full px-4 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" />
                         </div>
-                        <div className='col-span-3 mt-2'>
+                        <div className='col-span-3 mt-2 tail-half'>
                             <h1>Telephone($):</h1>
                             <input type="text" id="name" name="name" value={0} onChange={handleChange} className="mt-2 col-span-6 w-full px-4 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" />
                         </div>

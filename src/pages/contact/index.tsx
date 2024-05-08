@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaArrowDown, } from 'react-icons/fa';
+import { Collapse } from 'antd';
 
 const ContactForm: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -17,13 +18,15 @@ const ContactForm: React.FC = () => {
         e.preventDefault();
         console.log(formData); // You can handle form submission logic here
     };
+    const { Panel } = Collapse;
 
     return (
         <div>
+
             <h1 className="text-3xl font-bold my-8 text-center">Contact Us</h1>
-            <div className="max-w-4xl mx-auto mt-8 grid grid-cols-12 tail-flex gap-4">
-                <div className='col-span-6'>
-                    <div className=' border border-black-600'>
+            <div className="max-w-7xl mx-auto mt-8 grid grid-cols-12 tail-flex gap-4">
+                <div className='col-span-6 tail-w'>
+                    <div className='border-black-600'>
                         <div className='bg-orange-500 p-1 text-left text-white font-bold'>
                             <div className='ml-4'>Contact Us Do Not</div>
                         </div>
@@ -112,34 +115,25 @@ const ContactForm: React.FC = () => {
                                     <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="col-span-6 w-full px-4 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" />
                                 </div>
                                 <div className='text-center mt-4'>
-                                <button type="submit" className="bg-blue-500 text-white text-sm px-2 py-1 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Submit</button>
+                                    <button type="submit" className="bg-blue-500 text-white text-sm px-2 py-1 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Submit</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div className='col-span-6 mx-auto ml-4'>
-                    <h1 className='text-blue-400 text-3xl font-bold'>Frequently Asked Questions</h1>
-                    <div className='text-gray-500 text-2xl mt-6'>
-                        What is Rentec Pro?
-                    </div>
-                    <hr className="border-t border-gray-300 my-4 w-full" />
-                    <div className='text-gray-500 text-2xl mt-6'>
-                      How much does Rentec Pro Cost?
-                    </div>
-                    <hr className="border-t border-gray-300 my-4 w-full" />
-                    <div className='text-gray-500 text-2xl mt-6'>
-                        What is the differenc e between Rentec Pro and Rentec PM?
-                    </div>
-                    <hr className="border-t border-gray-300 my-4 w-full" />
-                    <div className='text-gray-500 text-2xl mt-6'>
-                        What is Rentec Pro?
-                    </div>
-                    <hr className="border-t border-gray-300 my-4 w-full" />
-                    <div className='text-gray-500 text-2xl mt-6'>
+                <div className='col-span-6 tail-w mx-auto ml-4'>
+                    <h3 className='text-blue-400 text-3xl font-bold tail-font tail-center'>Frequently Asked Questions</h3>
+                    <Collapse className='mt-4 text-gray-500 w-full'>
+                        <Panel header=" What is Rentec Pro?"  key="1">
+                           Description of this topic
+                        </Panel>
+                        <Panel header=" How much does Rentec Pro Cost?" key="2">
+                          How much does Rentec Pro Cost?
+                        </Panel>
+                        <Panel header=" Does Rentec Pro include an app for my tenants?" key="3">
                         Does Rentec Pro include an app for my tenants?
-                    </div>
-
+                        </Panel>
+                    </Collapse>
                 </div>
             </div>
         </div>

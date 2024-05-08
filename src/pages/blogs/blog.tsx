@@ -10,8 +10,10 @@ interface BlogArticleProps {
 
 const Blog: React.FC<BlogArticleProps> = ({ title, content, date, author }) => {
     return (
-        <div className="max-w-4xl mx-auto mt-8 grid grid-cols-12 gap-4 tail-flex">
-            <div className='col-span-8 flex justify-center tail-w'>
+        <>
+        <h1 className='text-3xl text-gray-800 font-bold text-center my-6'>Blog Page</h1>
+        <div className="max-w-7xl mx-auto mt-8 grid grid-cols-12 gap-4 tail-flex">
+            <div className='col-span-8 flex justify-center tail-w'> 
                 <div>
                     <div className='mx-auto flex  items-center'>
                         Home <GoArrowRight className='ml-3' /> Blog <GoArrowRight className='mx-2' /> Real Estate Financing  <GoArrowRight className='mx-2' /> Creative Financing
@@ -59,6 +61,7 @@ const Blog: React.FC<BlogArticleProps> = ({ title, content, date, author }) => {
 
 
         </div>
+        </>
     );
 }
 
