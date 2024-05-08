@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
                             <div className='ml-4'>Contact Us Do Not</div>
                         </div>
                         <div>
-                            <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-2">
+                            <form onSubmit={handleSubmit} className="text-gray-600 max-w-lg mx-auto p-2">
                                 <div className="mb-1 grid grid-cols-12 gap-4 flex items-center">
                                     <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2">This inquiry is regarding:</label>
                                     <div className="relative inline-block col-span-6 ">
