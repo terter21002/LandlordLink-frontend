@@ -11,6 +11,8 @@ import Blogs from './pages/blogs';
 import Blog from './pages/blogs/blog';
 import Services from './pages/services';
 import Contact from './pages/contact';
+import Portal from './pages/portal';
+import News from './pages/news';
 
 import About from './pages/about';
 
@@ -18,7 +20,7 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='/posts/create' element={<CreatePost />} />
           <Route path='/posts/update' element={<UpdatePost />} />
@@ -29,6 +31,8 @@ const App: React.FC = () => {
           <Route path="/blogs/blog_detail" element={<Blog title="title" content="content" date="date" author="author"/>} />
           <Route path='/services' element={<Services />} />
           <Route path='/contact' element={< Contact />} />
+          <Route path='/portal' element={<Portal />} />
+          <Route path='/news' element={<News news={[]}/>} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

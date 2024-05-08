@@ -81,7 +81,7 @@ const Forum: React.FC<ForumProps> = ({ title }) => {
                         <button className='bg-blue-200 p-1 rounded-md text-blue-900 mt-3 ml-3'>Denver, Colorado</button>
                         <hr className="border-t border-gray-300 my-2" />
                         <div className='eval flex items-center justify-between'>
-                            <div className='fa-icons'>
+                            <div className='fa-icons flex items-center'>
                                 <FaArrowUp className='inline text-gray-600' /> <span className='ml-2'>2 Votes</span>
                                 <FaBeer className="inline text-green-600 ml-3" /><span className='text-green-600 ml-2'>Following</span>
                                 <FaEnvelope className='inline text-gray-600 ml-3' /> <span className='ml-2'> Share</span>
@@ -129,7 +129,7 @@ const Forum: React.FC<ForumProps> = ({ title }) => {
                                 <hr className="border-t border-gray-300 my-2 w-1/4" />
 
                                 <div className='eval flex items-center justify-between'>
-                                    <div className='fa-icons'>
+                                    <div className='fa-icons flex items-center'>
                                         <FaArrowUp className='inline text-gray-600' /> <span className='ml-2'>2 Votes</span>
                                         <span className='ml-6'>....</span>
                                     </div>
