@@ -42,7 +42,7 @@ const Forums: React.FC<ForumProps> = ({ posts }) => {
         <>
             <div className="max-w-7xl mx-auto mt-8">
                 <h2 className="text-2xl font-bold mb-4">Forum Posts
-                    <div className='flex flex-wrap items-center mt-5 tail-flex'>
+                    <div className='flex flex-wrap items-center mt-5 tail-flex tail-end relative'>
                         <button className="sm:d-none bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-full text-sm tail-none">
                             Newest
                         </button>
@@ -62,6 +62,9 @@ const Forums: React.FC<ForumProps> = ({ posts }) => {
                             <option value="2">New York</option>
                             <option value="3">Los Angeles</option>
                         </select>
+                        <button className="tail-m-2 tail-block  tail-static  hover:bg-gray-500 text-black font-bold py-1 px-2 rounded-full text-sm  tail-none absolute right-0 top-0 bg-blue-500 text-white">
+                            <Link to="/forums/new_forum">Post a New</Link>
+                        </button>
                     </div>
                 </h2>
                 {initialPosts.map((post, index) => (

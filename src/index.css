@@ -40,7 +40,9 @@ body.dark-mode {
     }
     margin: 0
   }
-  
+  .tail-end {
+    justify-content: flex-end;
+  }
   .tail-none {
     display: none;
     
@@ -62,6 +64,9 @@ body.dark-mode {
   {
     text-align: center;
   }
+  .tail-static{
+    position: static
+  }
   .tail-justiy {
     justify-content: center;
   }
@@ -73,6 +78,9 @@ body.dark-mode {
   }
   .tail-font {
     font-size: 22px;
+  }
+  .tail-m-2{
+    margin: 15px
   }
 }
 
