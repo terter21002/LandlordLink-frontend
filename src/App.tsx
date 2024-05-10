@@ -14,6 +14,9 @@ import Services from './pages/services';
 import Contact from './pages/contact';
 import Portal from './pages/portal';
 import News from './pages/news';
+import Login from './pages/auth/login';
+import Register from './pages/auth/register';
+
 
 import About from './pages/about';
 
@@ -34,6 +37,8 @@ const App: React.FC = () => {
           <Route path='/services' element={<Services />} />
           <Route path='/contact' element={< Contact />} />
           <Route path='/portal' element={<Portal />} />
+          <Route path='/login' element={< Login />} />
+          <Route path='/register' element={<Register />} />
           
           new_forum
           <Route path='/news' element={<News/>} />

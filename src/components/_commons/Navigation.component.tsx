@@ -34,26 +34,32 @@ const Navigation: React.FC = () => {
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    <NavLink to="/" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
+                    <NavLink to="/" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-4 py-2 text-sm font-medium'); }} >
                       Home
                     </NavLink>
-                    <NavLink to="/news" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
+                    <NavLink to="/news" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-4 py-2 text-sm font-medium'); }} >
                       News
                     </NavLink>
-                    <NavLink to="/blogs" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
+                    <NavLink to="/blogs" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-4 py-2 text-sm font-medium'); }} >
                       Blogs
                     </NavLink>
-                    <NavLink to="/forums" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
+                    <NavLink to="/forums" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-4 py-2 text-sm font-medium'); }} >
                       Forum
                     </NavLink>
-                    <NavLink to="/portal" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
+                    <NavLink to="/portal" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-4 py-2 text-sm font-medium'); }} >
                       Landlord Portal
                     </NavLink>
-                    <NavLink to="/services" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
+                    <NavLink to="/services" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-4 py-2 text-sm font-medium'); }} >
                       Services
                     </NavLink>
-                    <NavLink to="/contact" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium'); }} >
+                    <NavLink to="/contact" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-4 py-2 text-sm font-medium'); }} >
                       Contact Us
+                    </NavLink>
+                    <NavLink to="/login" className={({ isActive, isPending }) => { return classNames(isActive ? ' text-orange-200' : 'text-gray-300  hover:text-white', 'rounded-md pl-16 py-2 text-sm font-medium'); }} >
+                      <span className='ml-16 '>Login</span>
+                    </NavLink>
+                    <NavLink to="/register" className={({ isActive, isPending }) => { return classNames(isActive ? 'text-orange-200' : 'text-gray-300  hover:text-white', 'rounded-md px-8 py-2 text-sm font-medium'); }} >
+                    <span className='mr-16 '>Register</span>
                     </NavLink>
                   </div>
                 </div>

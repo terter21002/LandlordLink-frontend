@@ -33,32 +33,16 @@ const ContactForm: React.FC = () => {
                         <div>
                             <form onSubmit={handleSubmit} className="text-gray-600 max-w-lg mx-auto p-2">
                                 <div className="mb-1 grid grid-cols-12 gap-4 flex items-center">
-                                    <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2">This inquiry is regarding:</label>
-                                    <div className="relative inline-block col-span-6 ">
-                                        <select className="block appearance-none w-full bg-white border border-gray-300 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                                            <option>How much it will take?</option>
-                                            <option>What;s your company name?</option>
-                                            <option>What's your telephone number?</option>
-                                        </select>
-                                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                            <FaArrowDown />
-                                        </div>
-                                    </div>
+                                    <label htmlFor="name" className="block mb-1 col-span-6 text-left  font-bold ml-2">Request Type:  </label>
+                                    <select className="h-8 px-2 border roundeds-md rounded-md text-sm border-gray-300 col-span-6 tail-w tail-block">
+                                        <option value="1">Fix an Issue</option>
+                                        <option value="2">Enhance a feather</option>
+                                        <option value="3">Suggestion for Improvement</option>
+                                        <option value="3">Comments</option>
+                                    </select>
                                 </div>
                                 <div className="mb-1 grid grid-cols-12 gap-4 flex items-center">
-                                    <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2">Name * </label>
-                                    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="col-span-6 w-full px-4 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" />
-                                </div>
-                                <div className="mb-1 grid grid-cols-12 gap-4 flex items-center">
-                                    <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2">Title:</label>
-                                    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="col-span-6 w-full px-4 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" />
-                                </div>
-                                <div className="mb-1 grid grid-cols-12 gap-4 flex items-center">
-                                    <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2">Company:</label>
-                                    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="col-span-6 w-full px-4 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" />
-                                </div>
-                                <div className="mb-1 grid grid-cols-12 gap-4 flex items-center">
-                                    <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2">Telephone:</label>
+                                    <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2">Name  </label>
                                     <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="col-span-6 w-full px-4 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" />
                                 </div>
                                 <div className="mb-1 grid grid-cols-12 gap-4 flex items-center">
@@ -66,53 +50,13 @@ const ContactForm: React.FC = () => {
                                     <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="col-span-6 w-full px-4 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" />
                                 </div>
                                 <div className="mb-1 grid grid-cols-12 gap-4 flex items-center">
-                                    <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2">Prefered to be contacted By:</label>
-                                    <div className="grid grid-cols-12 gap-4">
-                                        <div className="col-span-4 flex items-center mb-2">
-                                            <input
-                                                type="radio"
-                                                name="radioOption"
-                                                value="Cell Phone"
-                                                checked={false}
-                                                className="form-radio text-indigo-600 h-5 w-5"
-                                            />
-                                            <label className="ml-1 text-gray-700">
-                                                Phone
-                                            </label>
-                                        </div>
-                                        <div className=" col-span-4 flex items-center mb-2">
-                                            <input
-                                                type="radio"
-                                                name="radioOption"
-                                                value="Cell Phone"
-                                                checked={false}
-                                                className="form-radio text-indigo-600 h-5 w-5"
-                                            />
-                                            <label className="ml-1 text-gray-700">
-                                                Phone
-                                            </label>
-                                        </div>
-                                        <div className="col-span-4 flex items-center mb-2">
-                                            <input
-                                                type="radio"
-                                                name="radioOption"
-                                                value="Cell Phone"
-                                                checked={false}
-                                                className="form-radio text-indigo-600 h-5 w-5"
-                                            />
-                                            <label className="ml-1 text-gray-700">
-                                                Phone
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="mb-1 grid grid-cols-12 gap-4 flex items-center">
-                                    <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2">Please enter your questions or comments:</label>
-                                    <textarea className="col-span-6 resize-none border border-gray-300 rounded-md p-2 w-full h-30"></textarea>
-                                </div>
-                                <div className="mb-1 grid grid-cols-12 gap-4 flex items-center">
-                                    <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2">AntiSpam:</label>
+                                    <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2">Telephone:</label>
                                     <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="col-span-6 w-full px-4 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" />
+                                </div>
+
+                                <div className="mb-1 grid grid-cols-12 gap-4 flex items-center">
+                                    <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2"> comments:</label>
+                                    <textarea className="col-span-6 resize-none border border-gray-300 rounded-md p-2 w-full h-30"></textarea>
                                 </div>
                                 <div className='text-center mt-4'>
                                     <button type="submit" className="bg-blue-500 text-white text-sm px-2 py-1 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Submit</button>
@@ -124,14 +68,14 @@ const ContactForm: React.FC = () => {
                 <div className='col-span-6 tail-w mx-auto ml-4 border border-gray p-4'>
                     <h3 className='text-blue-400 text-3xl font-bold tail-font tail-center'>Frequently Asked Questions</h3>
                     <Collapse className='mt-4 text-gray-500 w-full'>
-                        <Panel header=" What is Rentec Pro?"  key="1">
-                           Description of this topic
+                        <Panel header=" What is Rentec Pro?" key="1">
+                            Description of this topic
                         </Panel>
                         <Panel header=" How much does Rentec Pro Cost?" key="2">
-                          How much does Rentec Pro Cost?
+                            How much does Rentec Pro Cost?
                         </Panel>
                         <Panel header=" Does Rentec Pro include an app for my tenants?" key="3">
-                        Does Rentec Pro include an app for my tenants?
+                            Does Rentec Pro include an app for my tenants?
                         </Panel>
                     </Collapse>
                 </div>

@@ -23,7 +23,7 @@ const blogPosts = [
 const Services: React.FC = () => {
     return (
         <div className="max-w-7xl mx-auto mt-8 grid grid-cols-12 gap-4 tail-flex">
-            <div className='col-span-7 tail-w'>
+            <div className='col-span-12 tail-w'>
                 <h1 className="text-3xl font-bold text-black-800 ml-6 font-bold my-8">Services</h1>
                 <h3 className='text-gray-700 font-bold my-3 text-lg'>Property Management</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -87,7 +87,7 @@ const Services: React.FC = () => {
                 
             </div>
             
-            <div className='col-span-5 tail-w mt-24 tail-flex'>
+            <div className='col-span-12 tail-w mt-2 tail-flex'>
                 <h3 className='text-gray-700 font-bold text-lg w-full tail-w'>Other Info</h3>
                 <div className="tail-w border w-full my-3 h-36 flex items-center justify-center text-2xl text-gray-500 font-bold mt-2">
                       Tenant Search
