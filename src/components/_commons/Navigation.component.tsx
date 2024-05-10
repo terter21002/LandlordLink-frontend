@@ -55,12 +55,6 @@ const Navigation: React.FC = () => {
                     <NavLink to="/contact" className={({ isActive, isPending }) => { return classNames(isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-4 py-2 text-sm font-medium'); }} >
                       Contact Us
                     </NavLink>
-                    <NavLink to="/login" className={({ isActive, isPending }) => { return classNames(isActive ? ' text-orange-200' : 'text-gray-300  hover:text-white', 'rounded-md pl-16 py-2 text-sm font-medium'); }} >
-                      <span className='ml-16 '>Login</span>
-                    </NavLink>
-                    <NavLink to="/register" className={({ isActive, isPending }) => { return classNames(isActive ? 'text-orange-200' : 'text-gray-300  hover:text-white', 'rounded-md px-8 py-2 text-sm font-medium'); }} >
-                    <span className='mr-16 '>Register</span>
-                    </NavLink>
                   </div>
                 </div>
               </div>

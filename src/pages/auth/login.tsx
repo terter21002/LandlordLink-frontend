@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { FaGoogle,FaApple } from "react-icons/fa";
-import {Link} from 'react-router-dom';
 
-const RegistrationForm: React.FC = () => {
+const LoginForm: React.FC<{setMode: Function}> = (props: {setMode: Function}) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,7 +21,6 @@ const RegistrationForm: React.FC = () => {
 
   return  (
     <form onSubmit={handleSubmit} className="max-w-5xl mx-auto mt-8">
-      <h1 className="font-bold text-3xl text-gray-800 text-center">Login</h1>
        <div className="grid grid-cols-12 gap-4 mt-8 my-3">
       <button className="col-span-6 text-white bg-blue-400 flex items-center p-2 justify-center font-bold"> <FaGoogle  className="mr-3"/>Continue With Google</button>
       <button className="col-span-6 text-white bg-blue-400 p-2 flex items-center p-2 justify-center font-bold"><FaApple className="mr-3" ></FaApple>Continue With Apple</button>
@@ -53,7 +51,7 @@ const RegistrationForm: React.FC = () => {
       </div>
       <div className="flex justify-between flex items-center">
       <p className="mb-3 text-gray-800">Forgot your password?</p>
-      <span className="text-blue-400 font-bold text-xl mr-2 "><Link to="/register">Register</Link></span>
+      <span className="text-blue-400 font-bold text-xl mr-2 " onClick={() => props.setMode("register")}>Register</span>
       </div>
       <button
         type="submit"
@@ -65,4 +63,4 @@ const RegistrationForm: React.FC = () => {
   );
 };
 
-export default RegistrationForm;
+export default LoginForm;

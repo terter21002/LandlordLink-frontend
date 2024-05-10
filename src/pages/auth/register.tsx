@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { FaGoogle,FaApple } from "react-icons/fa";
+import { FaGoogle, FaApple } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
-const RegistrationForm: React.FC = () => {
+const RegistrationForm: React.FC<{ setMode: Function }> = (props: { setMode: Function }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,12 +20,11 @@ const RegistrationForm: React.FC = () => {
     });
   };
 
-  return  (
-    <form onSubmit={handleSubmit} className="max-w-5xl mx-auto mt-8">
-      <h1 className="font-bold text-3xl text-gray-800 text-center">Register</h1>
-       <div className="grid grid-cols-12 gap-4 mt-8 my-3">
-       <button className="col-span-6 text-white bg-blue-400 flex items-center p-2 justify-center font-bold"> <FaGoogle  className="mr-3"/>Continue With Google</button>
-      <button className="col-span-6 text-white bg-blue-400 p-2 flex items-center p-2 justify-center font-bold"><FaApple className="mr-3" ></FaApple>Continue With Apple</button>
+  return (
+    <form onSubmit={handleSubmit} className="max-w-5xl mx-auto">
+      <div className="grid grid-cols-12 gap-4">
+        <button className="col-span-6 text-white bg-blue-400 flex items-center p-2 justify-center font-bold"> <FaGoogle className="mr-3" />Continue With Google</button>
+        <button className="col-span-6 text-white bg-blue-400 p-2 flex items-center p-2 justify-center font-bold"><FaApple className="mr-3" ></FaApple>Continue With Apple</button>
       </div>
       <div className="mb-4">
         <label htmlFor="username" className="block text-sm font-medium text-gray-700">
@@ -74,7 +74,7 @@ const RegistrationForm: React.FC = () => {
           className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
         />
       </div>
-     
+
       <div className="mb-4">
         <label htmlFor="username" className="block text-sm font-medium text-gray-700">
           Property Address:
@@ -101,7 +101,7 @@ const RegistrationForm: React.FC = () => {
       </div>
       <div className="mb-4">
         <label htmlFor="username" className="block text-sm font-medium text-gray-700">
-        How did you hear about LandordLink?
+          How did you hear about LandordLink?
         </label>
         <input
           type="text"
@@ -111,9 +111,12 @@ const RegistrationForm: React.FC = () => {
           className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
         />
       </div>
+      <div className="flex justify-between">
+        <p >Already have one?</p><span className="font-bold text-blue-500" onClick={() => props.setMode("login")}>Go to Login</span>
+      </div>
       <button
         type="submit"
-        className="w-full bg-indigo-600 text-white p-3 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+        className="w-full bg-indigo-600 mt-12 text-white p-3 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
       >
         Register
       </button>
