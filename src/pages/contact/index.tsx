@@ -23,12 +23,12 @@ const ContactForm: React.FC = () => {
     return (
         <div>
 
-            <h1 className="text-3xl font-bold my-8 text-center">Contact Us</h1>
+            <h1 className="text-3xl font-bold my-8 text-center">Feedback Form</h1>
             <div className="max-w-7xl mx-auto mt-8 grid grid-cols-12 tail-flex gap-4">
                 <div className='col-span-6 tail-w border border-gray'>
                     <div className='border-black-600'>
                         <div className='bg-orange-500 p-1 text-left text-white font-bold'>
-                            <div className='ml-4 font-bold text-2xl'>Contact Us Do Not</div>
+                            <div className='ml-4 font-bold text-2xl'>Feedback Form</div>
                         </div>
                         <div>
                             <form onSubmit={handleSubmit} className="text-gray-600 max-w-lg mx-auto p-2">
