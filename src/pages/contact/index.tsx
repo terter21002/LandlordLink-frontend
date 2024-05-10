@@ -25,10 +25,10 @@ const ContactForm: React.FC = () => {
 
             <h1 className="text-3xl font-bold my-8 text-center">Contact Us</h1>
             <div className="max-w-7xl mx-auto mt-8 grid grid-cols-12 tail-flex gap-4">
-                <div className='col-span-6 tail-w'>
+                <div className='col-span-6 tail-w border border-gray'>
                     <div className='border-black-600'>
                         <div className='bg-orange-500 p-1 text-left text-white font-bold'>
-                            <div className='ml-4'>Contact Us Do Not</div>
+                            <div className='ml-4 font-bold text-2xl'>Contact Us Do Not</div>
                         </div>
                         <div>
                             <form onSubmit={handleSubmit} className="text-gray-600 max-w-lg mx-auto p-2">
@@ -36,9 +36,9 @@ const ContactForm: React.FC = () => {
                                     <label htmlFor="name" className="block mb-1 col-span-6 text-left font-bold ml-2">This inquiry is regarding:</label>
                                     <div className="relative inline-block col-span-6 ">
                                         <select className="block appearance-none w-full bg-white border border-gray-300 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                                            <option>Option 1</option>
-                                            <option>Option 2</option>
-                                            <option>Option 3</option>
+                                            <option>How much it will take?</option>
+                                            <option>What;s your company name?</option>
+                                            <option>What's your telephone number?</option>
                                         </select>
                                         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                                             <FaArrowDown />
@@ -121,7 +121,7 @@ const ContactForm: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className='col-span-6 tail-w mx-auto ml-4'>
+                <div className='col-span-6 tail-w mx-auto ml-4 border border-gray p-4'>
                     <h3 className='text-blue-400 text-3xl font-bold tail-font tail-center'>Frequently Asked Questions</h3>
                     <Collapse className='mt-4 text-gray-500 w-full'>
                         <Panel header=" What is Rentec Pro?"  key="1">

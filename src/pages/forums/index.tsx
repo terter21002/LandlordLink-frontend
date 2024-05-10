@@ -7,18 +7,18 @@ import Stack from '@mui/material/Stack';
 
 const initialPosts: ForumPost[] = [
     {
-        title: 'First ',
-        author: 'User1',
+        title: 'Web Scraping Techniques: Best Practices',
+        author: 'Maxwell',
         date: new Date(),
     },
     {
-        title: 'Second Post',
-        author: 'User2',
+        title: 'Frontend Development Trends in 2024',
+        author: 'Ted',
         date: new Date(),
     },
     {
-        title: 'Another Post',
-        author: 'User1',
+        title: 'Maximizing Productivity with Zapier Automation',
+        author: 'Dembel',
         date: new Date(),
     },
 ];
@@ -59,8 +59,8 @@ const Forums: React.FC<ForumProps> = ({ posts }) => {
                         </select>
                         <select className="block h-8 px-2 border rounded-md text-sm ml-6 tail-w">
                             <option value="1">Any Location</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
+                            <option value="2">New York</option>
+                            <option value="3">Los Angeles</option>
                         </select>
                     </div>
                 </h2>
@@ -85,7 +85,7 @@ const Forums: React.FC<ForumProps> = ({ posts }) => {
                         <p className="text-gray-600 grid grid-cols-12 gap-4 tail-flex">
                             <span className='tail-w col-span-1'></span>
                             <span className="tail-w col-span-6 font-semibold">21 Hours Ago | Real Estate Agent | {post.date.toDateString()}</span>
-                            <div className='tail-w col-span-5'><span className='font-bold text-blue-900 ml-10'>Last Reply</span> by Samuel | 5 minutes </div>
+                            <div className='tail-w col-span-5'><span className='font-bold text-blue-900 ml-10'>Last Reply</span> by Samuel | 5 minutes| {post.date.toDateString()} </div>
                         </p>
                     </div>
                 ))}
