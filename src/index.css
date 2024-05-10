@@ -40,6 +40,7 @@ body.dark-mode {
     }
     margin: 0
   }
+  
   .tail-none {
     display: none;
     
@@ -54,6 +55,9 @@ body.dark-mode {
   .tail-w-2 {
     width: 50%
   }
+  .tail-half {
+    width: 47%
+  }
   .tail-center 
   {
     text-align: center;
@@ -63,6 +67,9 @@ body.dark-mode {
   }
   .tail-p-5 {
    padding: 5px
+  }
+  .tail-font {
+    font-size: 22px;
   }
 }
 
