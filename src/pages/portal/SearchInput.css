@@ -1,0 +1,16 @@
+
+.ant-input::-webkit-input-placeholder {
+    color: grey; /* Change placeholder color to blue */
+  }
+  
+  .ant-input:-moz-placeholder {
+    color: grey; /* Change placeholder color to blue */
+  }
+  
+  .ant-input::-moz-placeholder {
+    color: grey; /* Change placeholder color to blue */
+  }
+  
+  .ant-input:-ms-input-placeholder {
+    color: grey; /* Change placeholder color to blue */
+  }
