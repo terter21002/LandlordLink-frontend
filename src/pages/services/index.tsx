@@ -63,7 +63,91 @@ const Services: React.FC = () => {
                             </div>
                         </div>
                 </div>
-                <h3 className='text-gray-700 font-bold my-3 text-lg flex justify-between'><span>Financial Services</span><span>Real Estate Consulting</span></h3>
+                <h3 className='text-gray-700 font-bold my-3 text-lg flex justify-between'><span>Financial Services</span></h3>
+                <div className="tail-h  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 tail-flex">
+                  
+                        <div className='mx-auto w-full'>
+                            <div className="bg-white p-6 rounded-md shadow-md mb-8">
+                                <h2 className="text-xl font-bold mb-2">Roofstocks</h2>
+                            </div>
+                        </div>
+                        <div className='mx-auto w-full'>
+                            <div className="bg-white p-6 rounded-md shadow-md mb-8">
+                                <h2 className="text-xl font-bold mb-2">Insuarance Plan
+                                </h2>
+                            </div>
+                        </div>
+                        <div className='mx-auto w-full'>
+                            <div className="bg-white p-6 rounded-md shadow-md mb-8">
+                                <h2 className="text-xl font-bold mb-2">Smita Singh
+                                </h2>
+                            </div>
+                        </div>
+                </div>
+                <h3 className='text-gray-700 font-bold my-3 text-lg flex justify-between'><span>Tenant Search</span></h3>
+                <div className="tail-h  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 tail-flex">
+                  
+                        <div className='mx-auto w-full'>
+                            <div className="bg-white p-6 rounded-md shadow-md mb-8">
+                                <h2 className="text-xl font-bold mb-2">Roofstocks</h2>
+                            </div>
+                        </div>
+                        <div className='mx-auto w-full'>
+                            <div className="bg-white p-6 rounded-md shadow-md mb-8">
+                                <h2 className="text-xl font-bold mb-2">Insuarance Plan
+                                </h2>
+                            </div>
+                        </div>
+                        <div className='mx-auto w-full'>
+                            <div className="bg-white p-6 rounded-md shadow-md mb-8">
+                                <h2 className="text-xl font-bold mb-2">Smita Singh
+                                </h2>
+                            </div>
+                        </div>
+                </div>
+                <h3 className='text-gray-700 font-bold my-3 text-lg flex justify-between'><span>Real Estate Consulting</span></h3>
+                <div className="tail-h  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 tail-flex">
+                  
+                        <div className='mx-auto w-full'>
+                            <div className="bg-white p-6 rounded-md shadow-md mb-8">
+                                <h2 className="text-xl font-bold mb-2">Roofstocks</h2>
+                            </div>
+                        </div>
+                        <div className='mx-auto w-full'>
+                            <div className="bg-white p-6 rounded-md shadow-md mb-8">
+                                <h2 className="text-xl font-bold mb-2">Insuarance Plan
+                                </h2>
+                            </div>
+                        </div>
+                        <div className='mx-auto w-full'>
+                            <div className="bg-white p-6 rounded-md shadow-md mb-8">
+                                <h2 className="text-xl font-bold mb-2">Smita Singh
+                                </h2>
+                            </div>
+                        </div>
+                </div>
+                <h3 className='text-gray-700 font-bold my-3 text-lg flex justify-between'>Eviction Attorney</h3>
+                <div className="tail-h  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 tail-flex">
+                  
+                        <div className='mx-auto w-full'>
+                            <div className="bg-white p-6 rounded-md shadow-md mb-8">
+                                <h2 className="text-xl font-bold mb-2">Roofstocks</h2>
+                            </div>
+                        </div>
+                        <div className='mx-auto w-full'>
+                            <div className="bg-white p-6 rounded-md shadow-md mb-8">
+                                <h2 className="text-xl font-bold mb-2">Insuarance Plan
+                                </h2>
+                            </div>
+                        </div>
+                        <div className='mx-auto w-full'>
+                            <div className="bg-white p-6 rounded-md shadow-md mb-8">
+                                <h2 className="text-xl font-bold mb-2">Smita Singh
+                                </h2>
+                            </div>
+                        </div>
+                </div>
+                <h3 className='text-gray-700 font-bold my-3 text-lg flex justify-between'>Eviction Service</h3>
                 <div className="tail-h  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 tail-flex">
                   
                         <div className='mx-auto w-full'>
@@ -85,19 +169,8 @@ const Services: React.FC = () => {
                         </div>
                 </div>
                 
-            </div>
-            
-            <div className='col-span-12 tail-w mt-2 tail-flex'>
-                <h3 className='text-gray-700 font-bold text-lg w-full tail-w'>Other Info</h3>
-                <div className="tail-w border w-full my-3 h-36 flex items-center justify-center text-2xl text-gray-500 font-bold mt-2">
-                      Tenant Search
-                </div>
-                <div className="tail-w border w-full my-3 h-36 flex items-center justify-center text-2xl text-gray-500 font-bold mt-2">
-                      Eviction Attorney
-                </div>
-                <div className="tail-w border w-full h-36 flex items-center justify-center text-2xl text-gray-500 font-bold mt-2">
-                       Eviction Service
-                </div>
+                
+                
             </div>
         </div>
     );
