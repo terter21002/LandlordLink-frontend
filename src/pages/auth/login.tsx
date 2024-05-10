@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaGoogle,FaApple } from "react-icons/fa";
+import {Link} from 'react-router-dom';
 
 const RegistrationForm: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -23,8 +24,8 @@ const RegistrationForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="max-w-5xl mx-auto mt-8">
       <h1 className="font-bold text-3xl text-gray-800 text-center">Login</h1>
        <div className="grid grid-cols-12 gap-4 mt-8 my-3">
-      <button className="col-span-6 text-white bg-blue-400 flex items-center p-2"> <FaGoogle  className="mr-3"/>Continue With Google</button>
-      <button className="col-span-6 text-white bg-blue-400 p-2 flex items-center p-2"><FaApple className="mr-3" ></FaApple>Continue With Apple</button>
+      <button className="col-span-6 text-white bg-blue-400 flex items-center p-2 justify-center font-bold"> <FaGoogle  className="mr-3"/>Continue With Google</button>
+      <button className="col-span-6 text-white bg-blue-400 p-2 flex items-center p-2 justify-center font-bold"><FaApple className="mr-3" ></FaApple>Continue With Apple</button>
       </div>
       <div className="mb-4">
         <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -50,9 +51,9 @@ const RegistrationForm: React.FC = () => {
           className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
         />
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between flex items-center">
       <p className="mb-3 text-gray-800">Forgot your password?</p>
-      <span className="text-blue-400 font-bold ">Register</span>
+      <span className="text-blue-400 font-bold text-xl mr-2 "><Link to="/register">Register</Link></span>
       </div>
       <button
         type="submit"

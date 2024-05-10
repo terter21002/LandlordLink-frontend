@@ -57,7 +57,7 @@ const ContactForm: React.FC = () => {
             </div>
             <div className='bg-blue-500 text-white border mx-auto max-w-7xl my-5 py-1 text-center flex items-center border-gray grid grid-cols-12 gap-4 tail-flex'>
                
-                <button className='hover:mouse-cursor text-2xl font-bold hover:text-orange-400 ml-2 col-span-10 tail-w'>Upload Tenant from Lease Agreement</button>
+                <button className=' hover:mouse-cursor text-2xl font-bold hover:text-orange-400 ml-2 col-span-10 tail-w'>Upload Tenant from Lease Agreement</button>
                 <button className='col-span-1 hover:text-orange-800 text-4xl tail-center mx-auto'  ><MdOutlineFileUpload /></button>
                 <div className='col-span-1'>
                    <FileUploadButton onFileSelect={handleFileSelect} buttonText="Choose File" accept="image/*" />
