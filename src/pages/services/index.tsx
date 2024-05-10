@@ -41,8 +41,8 @@ const Services: React.FC = () => {
                         </div>
                     ))}
                 </div>
-                <h3 className='text-gray-700 font-bold my-3 text-lg'>Background and Criminal Check</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <h3 className='text-gray-700 font-bold my-3 text-lg tail-w'>Background and Criminal Check</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 tail-w">
                   
                         <div className='h-24 mx-auto w-full'>
                             <div className="bg-white p-6 rounded-md shadow-md mb-8">
@@ -64,7 +64,7 @@ const Services: React.FC = () => {
                         </div>
                 </div>
                 <h3 className='text-gray-700 font-bold my-3 text-lg flex justify-between'><span>Financial Services</span><span>Real Estate Consulting</span></h3>
-                <div className="h-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="tail-h  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 tail-flex">
                   
                         <div className='mx-auto w-full'>
                             <div className="bg-white p-6 rounded-md shadow-md mb-8">
@@ -87,15 +87,15 @@ const Services: React.FC = () => {
                 
             </div>
             
-            <div className='col-span-5 tail-w mt-24'>
-                <h3 className='text-gray-700 font-bold my-3 text-lg'>Other Info</h3>
-                <div className="border w-full my-3 h-36 flex items-center justify-center text-2xl text-gray-500 font-bold">
+            <div className='col-span-5 tail-w mt-24 tail-flex'>
+                <h3 className='text-gray-700 font-bold text-lg w-full tail-w'>Other Info</h3>
+                <div className="tail-w border w-full my-3 h-36 flex items-center justify-center text-2xl text-gray-500 font-bold mt-2">
                       Tenant Search
                 </div>
-                <div className="border w-full my-3 h-36 flex items-center justify-center text-2xl text-gray-500 font-bold">
+                <div className="tail-w border w-full my-3 h-36 flex items-center justify-center text-2xl text-gray-500 font-bold mt-2">
                       Eviction Attorney
                 </div>
-                <div className="border w-full h-36 flex items-center justify-center text-2xl text-gray-500 font-bold">
+                <div className="tail-w border w-full h-36 flex items-center justify-center text-2xl text-gray-500 font-bold mt-2">
                        Eviction Service
                 </div>
             </div>
