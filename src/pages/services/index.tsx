@@ -63,7 +63,7 @@ const Services: React.FC = () => {
                             </div>
                         </div>
                 </div>
-                <h3 className='text-gray-700 font-bold my-3 text-lg flex justify-between'><span>Financial Services</span><span>Real Estate Consulting</span></h3>
+                <h3 className='text-gray-700 font-bold my-3 text-lg flex justify-between'><span>Financial Services</span></h3>
                 <div className="tail-h  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 tail-flex">
                   
                         <div className='mx-auto w-full'>
@@ -105,7 +105,7 @@ const Services: React.FC = () => {
                             </div>
                         </div>
                 </div>
-                {/* <h3 className='text-gray-700 font-bold my-3 text-lg flex justify-between'><span>Real Estate Consulting</span></h3>
+                <h3 className='text-gray-700 font-bold my-3 text-lg flex justify-between'><span>Real Estate Consulting</span></h3>
                 <div className="tail-h  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 tail-flex">
                   
                         <div className='mx-auto w-full'>
@@ -125,7 +125,7 @@ const Services: React.FC = () => {
                                 </h2>
                             </div>
                         </div>
-                </div> */}
+                </div>
                 <h3 className='text-gray-700 font-bold my-3 text-lg flex justify-between'>Eviction Attorney</h3>
                 <div className="tail-h  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 tail-flex">
                   
