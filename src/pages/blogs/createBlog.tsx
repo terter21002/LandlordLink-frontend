@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useAuth } from "../../AuthContext";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
+import { useAuth } from "../../AuthContext";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
@@ -12,9 +12,10 @@ interface Category {
   name: string;
 }
 
-const NewForum: React.FC = () => {
+const CreateBlog: React.FC = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [image, setImage] = useState<File | null>(null);
   const [category, setCategory] = useState("");
   const [categories, setCategories] = useState<Category[]>([]);
   const navigate = useNavigate();
@@ -37,22 +38,23 @@ const NewForum: React.FC = () => {
       title,
       content,
       category,
+      image,
     };
     try {
-      console.log(data);
-      await axios.post("http://localhost:5000/api/forum", data, {
+      await axios.post("http://localhost:5000/api/blogs", data, {
         headers: {
+          "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${user?.token}`,
         },
       });
-      toast.success("Forum created successfully!");
-      navigate("/forums");
+      toast.success("Blog post created successfully!");
+      navigate("/blogs");
     } catch (error: any) {
       if (error.response && error.response.status === 401) {
-        toast.error("You need to log in to create a forum.");
+        toast.error("You need to log in to create a blog post.");
       } else {
-        console.error("There was an error creating the forum!", error);
-        toast.error("Failed to create forum");
+        console.error("There was an error creating the blog!", error);
+        toast.error("Failed to create blog");
       }
     }
   };
@@ -60,7 +62,7 @@ const NewForum: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto mt-8">
       <ToastContainer />
-      <h1 className="text-3xl font-bold my-8">Create a New Forum</h1>
+      <h1 className="text-3xl font-bold my-8">Create a New Blog</h1>
       <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
         <input
           type="text"
@@ -74,6 +76,12 @@ const NewForum: React.FC = () => {
           value={content}
           onChange={setContent}
           className="shadow appearance-none text-gray-700 h-64 pb-10"
+        />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={(e) => setImage(e.target.files?.[0] || null)}
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
         <select
           value={category}
@@ -94,11 +102,11 @@ const NewForum: React.FC = () => {
           type="submit"
           className="bg-blue-500 hover:bg-blue-700 text-white p-2 rounded"
         >
-          Create Forum
+          Create Blog
         </button>
       </form>
     </div>
   );
 };
 
-export default NewForum;
+export default CreateBlog;
