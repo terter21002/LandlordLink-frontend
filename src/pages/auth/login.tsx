@@ -30,7 +30,7 @@ const LoginForm: React.FC<{ setMode: Function }> = (props: {
           <FaGoogle className="mr-3" />
           Continue With Google
         </button>
-        <button className="col-span-6 text-white bg-blue-400 p-2 flex items-center p-2 justify-center font-bold">
+        <button className="col-span-6 text-white bg-blue-400 flex items-center p-2 justify-center font-bold">
           <FaApple className="mr-3"></FaApple>Continue With Apple
         </button>
       </div>

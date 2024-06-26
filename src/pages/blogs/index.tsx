@@ -84,7 +84,7 @@ const BlogPage: React.FC = () => {
                 __html: `${blog.content.substring(0, 150)}...`,
               }}
             />
-            <div className="mt-3 grid grid-cols-12 flex items-center gap-4">
+            <div className="mt-3 grid grid-cols-12 items-center gap-4">
               <div className="col-span-1">
                 <TiMessages />
               </div>
