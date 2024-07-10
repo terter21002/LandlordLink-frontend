@@ -5,6 +5,7 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import axios from "axios";
 import { formatDistanceToNow } from "date-fns";
+import { useAuth } from "../../AuthContext";
 
 type ForumPost = {
   _id: string;
@@ -26,6 +27,7 @@ const Forums: React.FC = () => {
   const [inputPage, setInputPage] = useState<string>("1");
   const postsPerPage = 3;
   const [totalPages, setTotalPages] = useState<number>(1);
+  const { isLoggedIn } = useAuth();
 
   useEffect(() => {
     // Fetch posts from the backend
@@ -88,9 +90,11 @@ const Forums: React.FC = () => {
               <option value="2">New York</option>
               <option value="3">Los Angeles</option>
             </select>
-            <button className="tail-m-2 tail-block tail-static hover:bg-gray-500 font-bold py-2 px-2 rounded text-sm tail-none absolute right-0 top-0 bg-blue-500 text-white">
-              <Link to="/forums/new_forum">Post a New</Link>
-            </button>
+            {isLoggedIn && (
+              <button className="tail-m-2 tail-block tail-static hover:bg-gray-500 font-bold py-2 px-2 rounded text-sm tail-none absolute right-0 top-0 bg-blue-500 text-white">
+                <Link to="/forums/new_forum">Post a New</Link>
+              </button>
+            )}
           </div>
         </h2>
         {currentPosts.map((post) => (

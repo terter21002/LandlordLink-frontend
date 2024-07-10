@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaGoogle, FaApple } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "../../AuthContext";
 
 const RegistrationForm: React.FC<{ setMode: Function }> = (props: {
   setMode: Function;
 }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,6 +18,8 @@ const RegistrationForm: React.FC<{ setMode: Function }> = (props: {
   const [isAccreditedInvestor, setIsAccreditedInvestor] = useState("");
   const [referralSource, setReferralSource] = useState("");
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const { handleOAuthLogin } = useAuth();
+  const [isOAuth, setIsOAuth] = useState(false);
 
   const validateForm = () => {
     let validationErrors: { [key: string]: string } = {};
@@ -52,8 +57,22 @@ const RegistrationForm: React.FC<{ setMode: Function }> = (props: {
     return Object.keys(validationErrors).length === 0;
   };
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const token = params.get("token");
+    const user = JSON.parse(decodeURIComponent(params.get("user") as string));
+
+    if (token && user) {
+      handleOAuthLogin(user, token);
+      toast.success("Login successful");
+      navigate(location.pathname, { replace: true });
+    }
+  }, [location]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log(isOAuth);
+    if (isOAuth) return;
 
     if (!validateForm()) {
       toast.error("Please fix the validation errors before submitting");
@@ -81,15 +100,31 @@ const RegistrationForm: React.FC<{ setMode: Function }> = (props: {
     }
   };
 
+  const handleGoogleLogin = async () => {
+    try {
+      console.log(isOAuth);
+      setIsOAuth(true);
+      window.location.href = "http://localhost:5000/api/auth/google";
+      //await handleOAuthLogin();
+    } catch (error: any) {
+      console.error("Google login error:", error.message);
+      console.log(error);
+      toast.error("Failed to login with Google");
+    }
+  };
+
   return (
     <form onSubmit={handleSubmit} className="max-w-5xl mx-auto">
-      <div className="grid grid-cols-12 gap-4">
-        <button className="col-span-6 text-white bg-blue-400 flex items-center p-2 justify-center font-bold">
+      <div className="grid grid-cols-12 gap-4 mb-3">
+        <button
+          className="col-span-6 text-white bg-blue-400 hover:bg-blue-500 flex items-center p-2 justify-center font-bold"
+          onClick={handleGoogleLogin}
+        >
           {" "}
           <FaGoogle className="mr-3" />
           Continue With Google
         </button>
-        <button className="col-span-6 text-white bg-blue-400 p-2 flex items-center p-2 justify-center font-bold">
+        <button className="col-span-6 text-white bg-blue-400 hover:bg-blue-500 flex items-center p-2 justify-center font-bold">
           <FaApple className="mr-3"></FaApple>Continue With Apple
         </button>
       </div>
@@ -232,14 +267,14 @@ const RegistrationForm: React.FC<{ setMode: Function }> = (props: {
           <p className="text-red-500 text-sm">{errors.referralSource}</p>
         )}
       </div>
-      <div className="flex justify-between">
-        <p>Already have one?</p>
-        <span
-          className="font-bold text-blue-500"
+      <div className="flex justify-between items-center">
+        <p className=" text-gray-800">Already have one?</p>
+        <button
+          className="text-blue-400 font-bold mr-2 text-xl"
           onClick={() => props.setMode("login")}
         >
           Go to Login
-        </span>
+        </button>
       </div>
       <button
         type="submit"
