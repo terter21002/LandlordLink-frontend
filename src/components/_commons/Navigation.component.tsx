@@ -7,7 +7,8 @@ import { classNames } from "../../libs/utils.lib";
 import { useAuth } from "../../AuthContext";
 
 const Navigation: React.FC = () => {
-  const { isLoggedIn, logout } = useAuth();
+  const { isLoggedIn, logout, user } = useAuth();
+  const adminEmail = "l3Admin@email.com";
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
@@ -63,6 +64,21 @@ const Navigation: React.FC = () => {
                     >
                       News
                     </NavLink>
+                    {user?.email === adminEmail && (
+                      <NavLink
+                        to="/category"
+                        className={({ isActive }) =>
+                          classNames(
+                            isActive
+                              ? "bg-gray-900 text-white"
+                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            "rounded-md px-4 py-2 text-sm font-medium"
+                          )
+                        }
+                      >
+                        Category
+                      </NavLink>
+                    )}
                     <NavLink
                       to="/blogs"
                       className={({ isActive }) =>
@@ -173,6 +189,21 @@ const Navigation: React.FC = () => {
               >
                 News
               </NavLink>
+              {user?.email === adminEmail && (
+                <NavLink
+                  to="/category"
+                  className={({ isActive, isPending }) => {
+                    return classNames(
+                      isActive
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "rounded-md px-3 py-2 text-sm font-medium"
+                    );
+                  }}
+                >
+                  Category
+                </NavLink>
+              )}
               <NavLink
                 to="/blogs"
                 className={({ isActive, isPending }) => {

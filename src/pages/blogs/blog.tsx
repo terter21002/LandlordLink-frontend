@@ -10,6 +10,7 @@ import axios from "axios";
 import { Blog as BlogType, Comment as CommentType } from "../../types/blog";
 import { useAuth } from "../../AuthContext";
 import { formatDistanceToNow } from "date-fns";
+import ReactQuill from "react-quill";
 
 const Blog: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -34,6 +35,7 @@ const Blog: React.FC = () => {
 
   const handleCommentSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("ddd");
     if (!newComment.trim()) return;
     axios
       .post(
@@ -127,12 +129,11 @@ const Blog: React.FC = () => {
       <div className="max-w-7xl mx-auto mt-8">
         {isLoggedIn && (
           <form onSubmit={handleCommentSubmit} className="mt-4">
-            <textarea
+            <ReactQuill
               value={newComment}
-              onChange={(e) => setNewComment(e.target.value)}
+              onChange={setNewComment}
               placeholder="Add a comment"
-              className="border p-2 rounded w-full h-40"
-              required
+              className="shadow appearance-none text-gray-700 h-52 pb-10"
             />
             <button
               type="submit"
@@ -164,7 +165,10 @@ const Blog: React.FC = () => {
                 </p>
               </div>
             </div>
-            <p className="mt-2">{comment.content}</p>
+            <div
+              className="mt-2"
+              dangerouslySetInnerHTML={{ __html: comment.content }}
+            />
           </div>
         ))}
       </div>

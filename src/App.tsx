@@ -15,6 +15,7 @@ import Services from "./pages/services";
 import Contact from "./pages/contact";
 import Portal from "./pages/portal";
 import News from "./pages/news";
+import Category from "./pages/category";
 import Login from "./pages/auth/login";
 import Register from "./pages/auth/register";
 import PrivateRoute from "./PrivateRoute";
@@ -44,6 +45,7 @@ const App: React.FC = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/portal" element={<Portal />} />
             <Route path="/news" element={<News />} />
+            <Route path="/category" element={<Category />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

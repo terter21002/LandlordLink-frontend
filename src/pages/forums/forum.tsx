@@ -12,6 +12,7 @@ import { formatDistanceToNow } from "date-fns";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAuth } from "../../AuthContext";
+import ReactQuill from "react-quill";
 
 type ForumPost = {
   _id: string;
@@ -239,6 +240,7 @@ const Forum: React.FC = () => {
           </div>
         </div>
       </div>
+      <h3 className="text-2xl font-bold mb-4 text-center pt-5 pb-2">Replies</h3>
       {post.replies.map((reply) => (
         <div key={reply._id} className="grid grid-cols-12 gap-4 mt-2 border">
           <div className="col-span-2 bg-gray-100 p-3">
@@ -277,7 +279,10 @@ const Forum: React.FC = () => {
                   addSuffix: true,
                 })}
               </div>
-              <p className="text-gray-600">{reply.content}</p>
+              <div
+                className="text-gray-600"
+                dangerouslySetInnerHTML={{ __html: reply.content }}
+              />
               <hr className="border-t border-gray-300 my-2" />
 
               <div className="eval flex items-center justify-between">
@@ -301,12 +306,11 @@ const Forum: React.FC = () => {
       <ToastContainer />
       {isLoggedIn && (
         <form onSubmit={handleReplySubmit} className="mt-4">
-          <textarea
+          <ReactQuill
             value={newReply}
-            onChange={(e) => setNewReply(e.target.value)}
+            onChange={setNewReply}
             placeholder="Add a reply"
-            className="border p-2 rounded w-full h-40"
-            required
+            className="shadow appearance-none text-gray-700 h-52 pb-10"
           />
           <button
             type="submit"
